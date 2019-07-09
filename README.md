@@ -12,4 +12,6 @@ Run Command:
 
 	npm install
   
-Then, write the ip of your device in [[DEVICE_IP]] spot
+Then, edit the index.js file, and write the ip of your device in [[DEVICE_IP]] spot. After that just run:
+
+	npm start index.js
