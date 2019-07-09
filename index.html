@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Semaforo</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" language="javascript">
+      function TurnInOnOffRojo() {
+        var elem = document.getElementById("circulo1");
+        if (elem.value=="1") elem.value = "0";
+        else elem.value = "1";
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "http://localhost:737/Semaforo", true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send();
+        var response = JSON.parse(xhttp.responseText);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="background">
+		<div id="box-out">
+			<div id="box-inside">
+        <button id="circulo1" class="color1" type="button" onclick="TurnInOnOffRojo()" value="1" name="Rojo"></button>
+        <button id="circulo2" class="color2" type="button" onclick="TurnInOnOffAmarillo()" value="1" name="Amarillo"></button>
+        <button id="circulo3" class="color3" type="button" onclick="TurnInOnOffVerde()" value="1" name="Verde"></button>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
