@@ -1,1 +1,12 @@
 node_modules/
+
+*.log
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+.vscode/
+npm-debug.log*
+
+$RECYCLE.BIN/
